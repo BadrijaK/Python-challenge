@@ -61,7 +61,7 @@ with open(writerpath, "w") as text:
 
         
         
-        text.write(f"{candidate}: {candidatePercentages[candidate]}% ({numberofvotes})\n")
+        text.write(f"{candidate}: {candidatePercentages[candidate]:.3f}% ({numberofvotes})\n")
     text.write("--------------------\n")
     text.write(f"Winner: {winner}\n")
     text.write("--------------------\n")
