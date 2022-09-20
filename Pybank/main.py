@@ -34,14 +34,15 @@ for i in range(1, len(profits)):
     currentProfits = profits[i]
     profitChange = currentProfits - previousProfits 
     totalProfitChanges = totalProfitChanges + profitChange
-
+    currentDate = months[i]
+    
 #Greatest increase and decrease from the profit changes    
     if profitChange > greatestincrease:
         greatestincrease = profitChange
-        max_date = max(months)
+        max_date = currentDate
     if profitChange < greatestdecrease:
         greatestdecrease = profitChange
-        min_date = min(months)
+        min_date = current[Date]
 average = round(totalProfitChanges / (totalmonth -1),2)
 
 #Print final analysis report 
@@ -51,7 +52,7 @@ print(f"Total Months: {totalmonth}")
 print(f"Total: ${totalprofit}")
 print(f"Average change: ${average}")
 print(f'Greatest Increase in Profits: {max_date} ({greatestincrease})') 
-print(f'Greatest Increase in Profits: {min_date} ({greatestdecrease})')
+print(f'Greatest Decrease in Profits: {min_date} ({greatestdecrease})')
 
 writerpath = os.path.join(".", "Resources", "results.txt")
 
@@ -62,7 +63,7 @@ with open(writerpath, "w") as text:
     text.write(f"Total: ${totalprofit}\n")
     text.write(f"Average change: ${average}\n")
     text.write(f'Greatest Increase in Profits: {max_date} ({greatestincrease})\n') 
-    text.write(f'Greatest Increase in Profits: {min_date} ({greatestdecrease})\n')
+    text.write(f'Greatest Decrease in Profits: {min_date} ({greatestdecrease})\n')
 
 
 
