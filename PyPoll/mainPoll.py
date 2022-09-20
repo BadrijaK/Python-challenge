@@ -23,8 +23,7 @@ for candidate in candidates:
     numberofvotes = candidates[candidate]
     percentage = (numberofvotes / numberofVoters) * 100
     candidatePercentages[candidate] = percentage 
-    #print(candidatePercentages[candidate])
-
+   
     if numberofvotes > highestnumberofVotes:
         highestnumberofVotes = numberofvotes 
 
