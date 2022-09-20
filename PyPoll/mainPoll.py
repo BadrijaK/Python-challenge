@@ -23,6 +23,7 @@ for candidate in candidates:
     numberofvotes = candidates[candidate]
     percentage = (numberofvotes / numberofVoters) * 100
     candidatePercentages[candidate] = percentage 
+    #print(candidatePercentages[candidate])
 
     if numberofvotes > highestnumberofVotes:
         highestnumberofVotes = numberofvotes 
@@ -40,7 +41,7 @@ for candidate in candidates:
 
     
     
-    print(f"{candidate}: {percentage:.3f}% ({numberofvotes})")
+    print(f"{candidate}: {candidatePercentages[candidate]:.3f}% ({numberofvotes})")
 print("--------------------")
 print(f"Winner: {winner}")
 print("--------------------")
@@ -61,7 +62,7 @@ with open(writerpath, "w") as text:
 
         
         
-        text.write(f"{candidate}: {percentage:.3f}% ({numberofvotes})\n")
+        text.write(f"{candidate}: {candidatePercentages[candidate]}% ({numberofvotes})\n")
     text.write("--------------------\n")
     text.write(f"Winner: {winner}\n")
     text.write("--------------------\n")
