@@ -42,7 +42,7 @@ for i in range(1, len(profits)):
         max_date = currentDate
     if profitChange < greatestdecrease:
         greatestdecrease = profitChange
-        min_date = current[Date]
+        min_date = currentDate
 average = round(totalProfitChanges / (totalmonth -1),2)
 
 #Print final analysis report 
